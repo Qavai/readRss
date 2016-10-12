@@ -1,0 +1,65 @@
+{
+  "manifest_version": 2,
+
+  "update_url":"http://clients2.google.com/service/update2/crx",
+
+  "name": "readRss",
+  "homepage_url" : "http://e-ivanov.ru/read_rss/",
+  
+  "description": "RSS-reader (c) Eugene Ivanov, 2013",
+  
+  "version": "1.102",
+
+  "content_scripts": [ 
+  {
+     "all_frames": true,
+     "js": ["includes/content.js"],
+     "matches": ["http://*/*", "https://*/*"],
+     "run_at": "document_end"
+  },
+
+  {
+     "all_frames": true,
+     "css": ["data/css/popup.css"],
+     "js": ["data/popup/jquery-2.1.4.js", "lib/funcs.js", "data/popup/reader.js"],
+     "matches": ["http://rss.loc/*"],
+     "run_at": "document_end"
+  } 
+  
+  ],
+  
+  "offline_enabled" : true,
+
+	"background": {
+  		"page" 			: "lib/background/background.html"
+   	},
+
+  "options_page": "data/options/options.html",
+  
+  "permissions": [
+    "tabs", 
+    "http://*/*",
+    "https://*/*",
+    "cookies",
+    "notifications",
+    "unlimitedStorage"
+   ],
+
+  	"content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self' https://www.youtube.com https://vimeo.com;",
+
+	"web_accessible_resources": [
+    	"data/popup/popup.html",
+    	"data/options/options.html"
+  	],
+  
+  	"browser_action": {
+      "default_popup"	: "data/popup/popup.html",
+      "default_title"	: "readerRss",
+      "default_icon"	: "data/icons/no_new.png"
+  	},
+
+  "icons": {
+    "16" : "data/icons/icon_16.png",
+    "48" : "data/icons/icon_48.png"
+  }
+}

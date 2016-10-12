@@ -1,0 +1,9 @@
+{
+    "name": "ei_read_rss", 
+    "license": "MPL 2.0", 
+    "author": "(c) Eugene Ivanov, 2013", 
+    "version": "1.000", 
+    "fullName": "readRss", 
+    "id": "read_rss@e-ivanov.ru", 
+    "description": "readRss"
+}

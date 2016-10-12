@@ -1,0 +1,29 @@
+h1 {
+ font-size:1.7em;
+ margin:10px 0;
+}
+
+body {
+ width:100%;
+ margin:10px auto;
+ padding:0 10px;
+}
+
+label {
+  padding-top:2px;
+  display:block;
+}
+input {
+  float:left;
+  margin-right:5px;
+}
+input[type=text] {
+  width:65px;
+  height:14px;
+  font-size:1em;
+  border:1px solid #e0e0e0;
+}
+.option-item {
+  clear:both;
+  margin-bottom:5px;
+}
