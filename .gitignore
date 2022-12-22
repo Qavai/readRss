@@ -23,6 +23,7 @@ platforms
 .new
 .old
 .tech
+.react-native
 
 *.bat
 

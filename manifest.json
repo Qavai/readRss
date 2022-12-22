@@ -4,7 +4,7 @@
   "update_url":"http://clients2.google.com/service/update2/crx",
 
   "name": "readRss",
-  "homepage_url" : "http://e-ivanov.ru/read_rss/",
+  "homepage_url" : "http://e-ivanov.ru/projects/read-rss/",
   
   "description": "RSS-reader (c) Eugene Ivanov, 2013",
   
@@ -20,8 +20,8 @@
 
   {
      "all_frames": true,
-     "css": ["data/css/popup.css"],
-     "js": ["data/popup/jquery-2.1.4.js", "lib/funcs.js", "data/popup/reader.js"],
+     "css": ["data/css/popup.css", "data/css/boxy.css"],
+     "js": ["data/popup/jquery-2.1.4.js", "data/popup/jquery.boxy.js", "lib/funcs.js", "data/popup/reader.js"],
      "matches": ["http://rss.loc/*"],
      "run_at": "document_end"
   } 

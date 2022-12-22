@@ -684,6 +684,26 @@ del {
 }
 
 
+#pop-menu-feed-edit {
+  width: 25%;
+  min-width: 290px;
+  padding:0 1em 1em 1em;
+  box-shadow:0 1px 10px -2px #AAA;
+
+  position: absolute;
+  right: 50px;
+  left: auto;
+  top: auto;
+}
+#pop-menu-feed-add p {
+  padding:0.5em 0;
+  margin:0;
+}
+#pop-menu-feed-add input[type="text"] {
+  width:95%;
+}
+
+
 .waiting-image {
  position: absolute;
  top:42%;
@@ -963,12 +983,13 @@ blockquote em {
 
  display:block;
  float:left;
- width:47%;
+ width:49%;
  overflow:hidden;
  margin-right:3px;
  margin-bottom:0.2em;
  cursor:pointer;
  border-radius: 5px;
+ border: 1px solid #e0e0e0;
 }
 
 .forum-forums > li.active,
@@ -1014,6 +1035,15 @@ blockquote em {
 .forum-forums > li.forum-is-subscribe {
  background:#ffdead;
 }
+.forum-forums > li.forum-status-ok {
+  background: #deffad;
+}
+.forum-forums > li.forum-status-not-found {
+  background: #deadff;
+}
+.forum-forums > li.forum-status-error {
+  background: #ffdead;
+}
 
 
 .forum-forums > li .forum-delete-action {
@@ -1026,6 +1056,19 @@ blockquote em {
  background: url(../images/delete.png) 0 0 no-repeat;
 }
 .forum-forums > li:hover .forum-delete-action {
+ display:inline-block;
+}
+
+.forum-forums > li .forum-edit-action {
+ display:none;
+ width:14px;
+ height: 14px;
+ position: absolute;
+ right: 45px;
+ top: 6px;
+ background: url(../images/button.edit.png) 0 0 no-repeat;
+}
+.forum-forums > li:hover .forum-edit-action {
  display:inline-block;
 }
 
@@ -1080,6 +1123,26 @@ blockquote em {
   margin:0.3em 0;
   font-size:0.8em;
   padding-left:24px;
+  height: 1.3em;
+  display: block;
+  overflow: hidden;
+}
+.forum-forums > li p.forum-feed-http-status {
+  margin:0.3em 0;
+  font-size: 0.6em;
+  padding-left:24px;
+  height: 1.3em;
+  display: block;
+  overflow: hidden;
+}
+.forum-forums > li p.forum-feed-last-item-date {
+  margin:0.3em 0;
+  font-size: 0.7em;
+  padding-left:24px;
+  height: 1.3em;
+  color: black;
+  display: block;
+  overflow: hidden;
 }
 
 .forum-forums > li a.forum-feed-link-img {

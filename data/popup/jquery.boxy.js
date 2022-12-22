@@ -1,5 +1,6 @@
 /**
- * Boxy 0.1.4 - Facebook-style dialog, with frills
+ * Boxy 0.1.5 - Facebook-style dialog, with frills
+  // ei 20221221 remove msie
  *
  * (c) 2008 Jason Frame
  * Licensed under the MIT License (LICENSE)
@@ -78,11 +79,7 @@ function Boxy(element, options) {
     this.toTop();
 
     if (this.options.fixed) {
-        if (jQuery.browser.msie && jQuery.browser.version < 7) {
-            this.options.fixed = false; // IE6 doesn't support fixed positioning
-        } else {
-            this.boxy.addClass('fixed');
-        }
+	    this.boxy.addClass('fixed');
     }
 
     if (this.options.center && Boxy._u(this.options.x, this.options.y)) {
@@ -331,8 +328,6 @@ jQuery.extend(Boxy, {
     _viewport: function() {
         var d = document.documentElement, b = document.body, w = window;
         return jQuery.extend(
-            jQuery.browser.msie ?
-                { left: b.scrollLeft || d.scrollLeft, top: b.scrollTop || d.scrollTop } :
                 { left: w.pageXOffset, top: w.pageYOffset },
             !Boxy._u(w.innerWidth) ?
                 { width: w.innerWidth, height: w.innerHeight } :
