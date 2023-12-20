@@ -1,0 +1,31 @@
+
+=============
+поменять жж на https
+https://bike-humour.livejournal.com/data/rss
+
+
+=============
+
+ncaught DOMException: Failed to execute 'open' on 'XMLHttpRequest': Invalid URL
+    at Object.http_loadBlob (chrome-extension://jeeopeoapicdmglffkfnlbfgnldbgmkj/lib/background/core.js:2309:13)
+    at Object.image_load_binary (chrome-extension://jeeopeoapicdmglffkfnlbfgnldbgmkj/lib/background/readrss.js:1048:19)
+    at Object.img_load (chrome-extension://jeeopeoapicdmglffkfnlbfgnldbgmkj/lib/background/readrss.js:635:14)
+    at chrome-extension://jeeopeoapicdmglffkfnlbfgnldbgmkj/lib/background/core.js:1923:33
+    at chrome-extension://jeeopeoapicdmglffkfnlbfgnldbgmkj/lib/background/storage.js:786:28
+
+
+object {
+  OwnUserId: 0
+  eventKey: 16003
+  msgType: img_load
+  url: https://janataha.livejournal.com&lt;img src=
+  url_301:
+  LastModified:
+  Etag:
+  http_status: 0
+  key: 0
+  datetime: 0
+  timeNextUpdate: 1536016536
+  priority: 5
+  tryCount: 10
+}

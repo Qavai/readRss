@@ -1,5 +1,5 @@
 {
-  "manifest_version": 2,
+  "manifest_version": 3,
 
   "update_url":"http://clients2.google.com/service/update2/crx",
 
@@ -8,7 +8,7 @@
   
   "description": "RSS-reader (c) Eugene Ivanov, 2013",
   
-  "version": "1.102",
+  "version": "1.202",
 
   "content_scripts": [ 
   {
@@ -31,28 +31,40 @@
   "offline_enabled" : true,
 
 	"background": {
-  		"page" 			: "lib/background/background.html"
+  		"service_worker" 			: "lib/background/background.js"
    	},
 
   "options_page": "data/options/options.html",
   
   "permissions": [
     "tabs", 
-    "http://*/*",
-    "https://*/*",
     "cookies",
     "notifications",
     "unlimitedStorage"
    ],
 
-  	"content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self' https://www.youtube.com https://vimeo.com;",
+  "host_permissions": [
+    "http://*/*",
+    "https://*/*"
+   ],
+
+  	"content_security_policy": {
+  		"extension_pages" : "script-src 'self'; object-src 'self';"
+  	},
 
 	"web_accessible_resources": [
-    	"data/popup/popup.html",
+ 	{
+      "resources": [
+       	"data/popup/popup.html",
     	"data/options/options.html"
+      ],
+      "matches": [
+        "*://*/*"
+      ]
+    }
   	],
   
-  	"browser_action": {
+  	"action": {
       "default_popup"	: "data/popup/popup.html",
       "default_title"	: "readerRss",
       "default_icon"	: "data/icons/no_new.png"
